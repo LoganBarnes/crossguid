@@ -30,7 +30,7 @@ elseif(ANDROID)
     # GUID_ANDROID is used in the headers, so make PUBLIC
     target_compile_definitions(crossguid PUBLIC GUID_ANDROID)
 else()
-    find_package(Libuuid REQUIRED)
+    find_package(LibUUID REQUIRED)
     if (NOT LIBUUID_FOUND)
         message(FATAL_ERROR
             "You might need to run 'sudo apt-get install uuid-dev' or similar")
